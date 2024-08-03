@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cd source 
+
+ifort utils.f90 GaussLegendre.f90 sph_harm.f90 Wigner3j.f90 born_elements.f90 S_mat.f90 -o S_mat.exe -O3 -xHost -qopenmp
+#gfortran utils.f90 GaussLegendre.f90 sph_harm.f90 Wigner3j.f90 born_elements.f90 S_mat.f90 -o S_mat.exe -O3 -fopenmp -fcheck=all
+#ifort utils.f90 Wigner3j.f90 wigner_test.f90 -o test.exe
+
+#ifort utils.f90 Wigner3j.f90 sph_harm.f90 born_elements.f90 main.f90 -o test.exe 
+
+mv *.exe ../

@@ -1,0 +1,18 @@
+! This contians the settings used in T-matrix calculations 
+&T_MAT_SETTINGS
+max_m = 120  ! Maximum magnetic quantum number to calculate T for 
+N_quad = 100  ! Nr of quad points to use in T-matrix calculation
+
+k = 27.110639470266513  ! k-vector to calculate T-matrix for (if k_single = .true.)
+
+k_min = 27.106269794047495  ! Lower range of k values to calculate for (if k_single = .false.)
+k_max = 27.11500914648553  ! Upper range of k values to calculate for (if k_single = .false.)
+N_k = 800  ! Nr. of k values to calculate for (if k_single = .false.)
+
+elastic = .true.  ! Toggles whether or not we perform elastic or multi channel calculation 
+k_single = .true.  ! Toggels wheter to perform calculation for a single k or a range of k's
+
+r_max = 20.  
+Nr = 4000
+hydrogen_bool = .true. 
+/ 

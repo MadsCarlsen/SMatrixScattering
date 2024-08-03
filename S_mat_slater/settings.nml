@@ -1,0 +1,47 @@
+! Settings for what to calculate  
+&CALCULATE_SETTINGS
+cal_tot_signal = .false.
+/ 
+
+! Settings used in the numerical calculations 
+&S_MAT_SETTINGS
+! Momentum values
+Nk = 2500
+k_low = 26.95848518395674
+k_high = 27.262793756576286
+
+! Theta values for integration 
+N_theta_int = 300  ! Usually use 600, but this seem to be quite large...
+theta_int_min = 0.
+theta_int_max = 0.15
+
+! Theta values for final results 
+N_theta_final = 1
+theta_final_min = 0.009
+theta_final_max = 0.15
+
+! Phi values for integration 
+N_phi_int = 100
+
+! Phi values for final results 
+N_phi_final = 1
+phi_final_min = 0.  ! In units of pi 
+phi_final_max = 1.  ! In units of pi 
+/ 
+
+! Settings for the target system 
+&TARGET_SETTINGS
+b = 0. 
+ta0 = 0. 
+/ 
+
+! Settings the WP 
+&WAVEPACKET_SETTINGS
+WP_type = 2  ! 0=Gauss, 1=E-Gauss, 2=Modulated WP
+k0z = 27.110639470266513  ! 10 keV
+sigma_time = 41.34137333518211 ! Sigma in z-direction in au  (100 as)
+sigma_perp = 0.13555319735133256  ! sigma_perp for 0,2, sigma_theta for 1...   
+omega = 0.375
+g_factor = 1.
+max_N = 10
+/ 

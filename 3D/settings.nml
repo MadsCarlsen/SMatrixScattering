@@ -1,0 +1,55 @@
+! Settings for what to calculate  
+&CALCULATE_SETTINGS
+cal_PINEM = .false.
+cal_Gauss = .true.
+cal_tot_elastic = .true.
+cal_scatt_elastic = .false.
+cal_scatt_inelastic = .false.
+cal_interference = .false.
+/ 
+
+! Settings used in the numerical calculations 
+&S_MAT_SETTINGS
+! Momentum values
+Nk = 3500  ! 3000, 4000 seems okay?   ! 2000 is very bad 
+k_low = 27.09341286209538
+k_high = 27.127866078437645
+
+! Theta values for integration 
+N_theta_int = 900
+theta_int_min = 0.
+theta_int_max = 0.035
+
+! Theta values for final results 
+N_theta_final = 50
+theta_final_min = 0.
+theta_final_max = 0.03
+
+! Phi values for integration 
+N_phi_int = 120
+
+! Phi values for final results 
+N_phi_final = 1
+phi_final_min = 0.  ! In units of pi 
+phi_final_max = 2.  ! In units of pi 
+
+interpolate_bool = .true.
+/ 
+
+! Settings for the well system 
+&TARGET_SETTINGS
+run_id = 'run_new' 
+b = 0. 
+E0 = -0.5
+E1 = -0.125
+/ 
+
+! Settings the WP 
+&WAVEPACKET_SETTINGS
+k0z = 27.110639470266513
+sigma_time = 1.  
+sigma_perp_factor = 0.01  
+omega = 0.05695419066134943 !0.02278167626453977
+g_factor = 1.
+max_N = 5
+/ 

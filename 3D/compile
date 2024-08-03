@@ -1,0 +1,14 @@
+#!/bin/bash
+
+source ~/intel/oneapi/setvars.sh
+
+# -pg for profiling
+
+#ifort utils.f90 interpolate.f90 S_mat_calculation.f90 -o S_mat.exe -O3 -xHost -qopenmp
+
+ifort utils.f90 interpolate.f90 S_mat_time_scan.f90 -o S_mat.exe -O3 -xHost -qopenmp
+
+
+echo "Compiling ended!"
+
+
